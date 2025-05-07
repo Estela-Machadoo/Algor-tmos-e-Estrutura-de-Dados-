@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Cliente:
+class Cliente(ABC):
 
     def __init__(self, nome):
         self.nome = nome
@@ -8,7 +8,7 @@ class Cliente:
 
     def __str__(self):
         return "Nome: " + self.nome + "\nLimite: " + str(self.__limite)
-
+    
     def imprimir(self):
         print(self)
 
@@ -19,9 +19,8 @@ class Cliente:
     @property
     def limite(self):
         return self.__limite
-
+    
     @limite.setter
     def limite(self, valor):
         if( valor > self.__limite):
-            self.__limite = valor 
-
+            self.__limite = valor

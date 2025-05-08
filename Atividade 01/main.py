@@ -7,11 +7,9 @@ from desktop import Desktop
 app = QApplication(sys.argv)
 
 categorias = []
-cat = Categoria("Cadastro de Categoria", categorias)
+cat = Categoria("Cadastro de Categoria")
 
-notbook = Notbook("Cadastro de Notbook", categorias, cat)
-desktop = Desktop("Cadastro de Desktop", categorias, cat)
-
+notbook = Notbook("Cadastro de Notbook", 2500.0, cat)
 notbook.show()
 
 sys.exit(app.exec_())
